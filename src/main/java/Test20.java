@@ -1,4 +1,3 @@
-import org.junit.Test;
 
 import java.util.Stack;
 
@@ -13,13 +12,9 @@ import java.util.Stack;
  */
 public class Test20 {
 
-    @Test
-    public void test() {
-
-    }
     public boolean isValid(String s) {
 
-        Stack<Character> stack = new Stack<>();
+        Stack<Character> stack = new Stack<Character>();
         int len = s.length();
         if(s.isEmpty()) {
             return true;
