@@ -25,12 +25,17 @@ public class Test136 {
      * @return
      */
     public int singleNumber(int[] nums) {
-        Hashtable<Integer, Integer> table = new Hashtable<Integer, Integer>();
+        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
         for (Integer i : nums) {
-            if (table.containsKey(i)) {
-                table.remove(i);
+            if (map.containsKey(i)) {
+                map.remove(i);
             } else {
-                table.put(i, i);
+                map.put(i, 1);
+            }
+        }
+        for (Integer key : map.keySet()) {
+            if (map.get(key) == 1) {
+                return key;
             }
         }
         //此处哈希表中只有一个目标值
